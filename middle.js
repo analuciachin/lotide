@@ -35,7 +35,8 @@ const eqArrays = function (firstArr, secondArr) {
   return isEqual
 }
 
-
+console.log('middle([1])', middle([1]));
+console.log('middle([1,2])', middle([1,2]));
 assertArraysEqual(middle([1]),[])
 assertArraysEqual(middle([1, 2]),[])
 assertArraysEqual(middle([1, 2, 3]),[2]) // => [2]
