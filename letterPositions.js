@@ -1,3 +1,26 @@
+// FUNCTION IMPLEMENTATION
+const assertArraysEqual = function(actualArr, expectedArr) {
+  isEqualArrays = eqArrays(actualArr, expectedArr);
+  if (!isEqualArrays) {
+    console.log(`🔴🔴🔴 Assertion Failed: ${actualArr} !== ${expectedArr}`);
+  } else {
+    console.log(`✅✅✅ Assertion Passed: ${actualArr} === ${expectedArr}`);
+  }
+};
+
+
+const eqArrays = function (firstArr, secondArr) {
+  let isEqual = false;
+  for (let i = 0; i < firstArr.length; i++) {
+    if (firstArr[i] === secondArr[i]) {
+      isEqual = true;
+    } else {
+      return isEqual = false
+    }
+  }
+  return isEqual
+}
+
 const letterPositions = function(sentence) {
   //const removeSpaces = sentence.replace(/ /g, '');
   const results = {};
@@ -22,4 +45,6 @@ const letterPositions = function(sentence) {
 };
 
 
-console.log(letterPositions("lighthouse in the house") )
+//console.log(letterPositions("lighthouse in the house") )
+
+assertArraysEqual(letterPositions("hello").e, [1]);
